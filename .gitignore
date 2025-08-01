@@ -1,0 +1,61 @@
+# Archivos de configuración sensibles
+config.env
+*.env
+
+# Archivos de base de datos y backups
+*.sql
+*.db
+*.sqlite
+
+# Archivos temporales y logs
+*.log
+*.tmp
+automation.log
+webmin.log
+
+# Cache de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# Entorno virtual
+venv/
+env/
+ENV/
+
+# Archivos de error HTML (muy grandes)
+error_*.html
+*error*.html
+
+# Screenshots y archivos grandes
+screenshots/
+*.png
+*.jpg
+*.jpeg
+*.gif
+before_table_search.png
+error_general.png
+menu_wells.png
+well_search.png
+error.png
+
+# Archivos ZIP grandes
+*.zip
+chromedriver-linux64.zip
+
+# CSVs de reportes (se regeneran)
+reporte_detallado_*.csv
+pozos_filtrados*.csv
+tiempos_ejecucion.csv
+well_data.csv
+
+# Archivos de datos grandes
+data/
+*.las
+
+# Archivos temporales de pruebas
+prueba_fechas
+tiempo.txt
