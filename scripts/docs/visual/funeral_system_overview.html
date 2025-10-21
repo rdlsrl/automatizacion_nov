@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Esquema Visual — Sistema Funeraria</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 24px; background: #f7f7f8; color: #222; }
+    h1, h2 { margin: 0.4em 0; }
+    .card { background: #fff; border-radius: 10px; padding: 18px; margin: 16px 0; box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+    .hint { color: #555; font-size: 0.95em; }
+    .mermaid { background: #fff; border-radius: 8px; padding: 12px; }
+    .footer { margin-top: 24px; color: #666; font-size: 0.9em; }
+    code { background: #f0f0f2; padding: 2px 6px; border-radius: 6px; }
+  </style>
+  <!-- Mermaid CDN (requiere internet) -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>mermaid.initialize({ startOnLoad: true, theme: 'default' });</script>
+</head>
+<body>
+  <h1>Sistema de Gestión Funeraria — Esquema Visual</h1>
+  <p class="hint">Abrí este archivo en un navegador. Para exportar: Imprimir → Guardar como PDF. Para JPG/PNG, usá una captura de pantalla.</p>
+
+  <div class="card">
+    <h2>Arquitectura (alto nivel)</h2>
+    <div class="mermaid">
+      flowchart LR
+        subgraph Usuarios
+          D[Dueño]
+          A[Administración]
+          S[Secretarías]
+          C[Choferes]
+        end
+
+        D & A & S & C --> UI[App Web (Panel + Formularios)]
+        UI --> AUTH[Autenticación + Roles (RBAC)]
+        UI --> API[Backend API (Servicios de negocio)]
+        API --> DB[(MariaDB/MySQL)]
+        API --> STORAGE[(Almacenamiento de archivos S3/MinIO)]
+        API --> AUD[Auditoría (eventos y cambios)]
+        API <-->|Jobs programados| WORK[Scheduler/Worker]
+        API --> WA[WhatsApp Cloud API/Proveedor]
+        API --> CONTAB[Integración Contable/ERP/Banco]
+        API --> INMEM[Inmemory.cl (API/CSV)]
+        WORK --> WA
+        WORK --> STORAGE
+        DB --> BACKUP[Backups automáticos en la nube]
+        STORAGE --> BACKUP
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Modelo de datos (simplificado)</h2>
+    <div class="mermaid">
+      erDiagram
+        CONTRATO ||--o{ SERVICIO : incluye
+        CONTRATO }o--|| CLIENTE : contratante
+        CONTRATO }o--|| FALLECIDO : caso
+        CONTRATO }o--o{ DESCUENTO : aplica
+        CONTRATO }o--o{ PAGO : abonos
+        CONTRATO }o--o{ DOCUMENTO : adjunta
+
+        SERVICIO }o--o{ PRODUCTO : usa
+        PRODUCTO }o--o{ INVENTARIO : stock
+        MOVIMIENTO_INVENTARIO }o--|| INVENTARIO : afecta
+        MOVIMIENTO_INVENTARIO }o--|| SERVICIO : por_servicio
+
+        EMPLEADO ||--o{ TURNO : tiene
+        EMPLEADO ||--o{ META : define
+        EMPLEADO ||--o{ ADELANTO : registra
+        EMPLEADO ||--o{ LIQUIDACION : genera
+
+        LIQUIDACION }o--o{ ITEM_LIQ : rubros
+        ITEM_LIQ }o--|| EMPLEADO : para
+
+        CONVENIO ||--o{ CONTRATO : aplica
+        DIRECTORIO }o--o{ SERVICIO : opera_en
+
+        NOTIFICACION }o--|| CONTRATO : sobre
+        NOTIFICACION }o--|| EMPLEADO : a_quien
+
+        AUDITORIA }o--|| EMPLEADO : actor
+        AUDITORIA }o--|| CONTRATO : sobre
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Flujo: Contrato → Liquidación</h2>
+    <div class="mermaid">
+      sequenceDiagram
+        participant Sec as Secretaría
+        participant Web as App Web
+        participant API as Backend
+        participant DB as DB
+        participant Work as Worker
+        participant Adm as Admin
+
+        Sec->>Web: Crea Cotización/Contrato (fecha/hora, descuentos)
+        Web->>API: Guardar CONTRATO + SERVICIOS + PAGOS
+        API->>DB: Persistir y AUDITORÍA
+
+        Note over API,Work: Reglas de bonos por fecha/hora, feriados, rol
+        Work->>DB: Acumula métricas (ventas/servicios/bonos)
+        Adm->>Web: Calcular liquidaciones del mes
+        Web->>API: Generar LIQUIDACION + ITEM_LIQ
+        API-->>Adm: PDFs y archivo para pago masivo
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Flujo: Notificaciones (familia y chofer)</h2>
+    <div class="mermaid">
+      sequenceDiagram
+        participant Sec as Secretaría
+        participant API as Backend
+        participant Work as Worker
+        participant WA as WhatsApp API
+
+        Sec->>API: Autoriza difusión / agenda servicio
+        API->>Work: Programa mensajes (4h, 5d, 8d, 30d, 1a)
+        Work->>WA: Tips (+4h), Tarjeta (+5d), Encuesta (+8d), Oficio (+30d), Aniversario (+1a)
+        Work->>WA: Al chofer de turno con indicaciones
+    </div>
+  </div>
+
+  <p class="footer">Exportá a PDF con el diálogo de impresión del navegador. Para editar, modificá este archivo o el Markdown en <code>scripts/docs/visual/funeral_system_overview.md</code>.</p>
+</body>
+</html>
