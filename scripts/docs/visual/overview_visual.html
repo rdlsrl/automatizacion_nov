@@ -22,6 +22,11 @@
     @media print{
       @page { size: A4 portrait; margin: 12mm }
       .cta{display:none!important}
+      /* Evitar que un título quede en una página y el contenido en la siguiente */
+      .card, figure{break-inside: avoid; page-break-inside: avoid}
+      h2, h3{break-after: avoid-page; page-break-after: avoid}
+      /* Forzar que una sección comience en la página siguiente si es necesario */
+      .page-break-before{break-before: page; page-break-before: always}
     }
   </style>
 </head>
@@ -47,7 +52,7 @@
     </figure>
   </div>
 
-  <div class="card">
+  <div class="card page-break-before">
     <h2>2) Estructura general del sistema</h2>
     <figure>
       <img src="arquitectura_sistema.svg" alt="Arquitectura del sistema funeraria" />
