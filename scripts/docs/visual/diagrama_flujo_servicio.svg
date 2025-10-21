@@ -38,11 +38,17 @@
 
   <!-- Validación -->
   <polygon points="340,120 470,155 340,190 210,155" class="decision"/>
-  <text x="240" y="155" class="label">Validación de datos y documentos</text>
+  <text x="240" y="148" class="label">
+    <tspan x="240" dy="0">Validación de datos</tspan>
+    <tspan x="240" dy="20">y documentos</tspan>
+  </text>
 
   <!-- Falta Doc Alert -->
-  <rect x="250" y="210" width="220" height="60" class="alert"/>
-  <text x="262" y="246" class="small">Alerta de faltantes o documentos incompletos</text>
+  <rect x="250" y="210" width="240" height="60" class="alert"/>
+  <text x="262" y="238" class="small">
+    <tspan x="262" dy="0">Alerta de faltantes o</tspan>
+    <tspan x="262" dy="18">documentos incompletos</tspan>
+  </text>
 
   <!-- Inventario -->
   <rect x="520" y="120" width="230" height="70" class="box"/>
@@ -50,7 +56,7 @@
   <text x="540" y="176" class="small">Ataúd, sala, flores, etc.</text>
 
   <!-- Stock bajo alert -->
-  <rect x="540" y="210" width="190" height="60" class="alert"/>
+  <rect x="540" y="210" width="210" height="60" class="alert"/>
   <text x="550" y="246" class="small">Reposición automática de stock</text>
 
   <!-- Planificación -->
@@ -59,7 +65,7 @@
   <text x="820" y="176" class="small">Chofer, horarios, traslados</text>
 
   <!-- Notificación chofer pill -->
-  <rect x="1040" y="100" width="180" height="32" class="pill"/>
+  <rect x="1040" y="100" width="220" height="32" class="pill"/>
   <text x="1050" y="122" class="small">Aviso automático al chofer (WhatsApp)</text>
 
   <!-- Ejecución -->
@@ -82,9 +88,12 @@
   <text x="822" y="486" class="small">Alerta de impagos o cobranzas pendientes</text>
 
   <!-- Notificaciones post -->
-  <rect x="80" y="600" width="290" height="80" class="ok"/>
-  <text x="100" y="635" class="label">Seguimiento automático post-servicio</text>
-  <text x="100" y="656" class="small">Envíos automáticos programados (agradecimientos, encuestas, recordatorios)</text>
+  <rect x="80" y="600" width="290" height="90" class="ok"/>
+  <text x="100" y="632" class="label">Seguimiento automático post-servicio</text>
+  <text x="100" y="654" class="small">
+    <tspan x="100" dy="0">Envíos automáticos programados</tspan>
+    <tspan x="100" dy="18">(agradecimientos, encuestas, recordatorios)</tspan>
+  </text>
 
   <!-- RRHH -->
   <rect x="420" y="600" width="260" height="80" class="ok"/>
@@ -92,9 +101,12 @@
   <text x="440" y="656" class="small">Registro de horarios y bonificaciones</text>
 
   <!-- Liquidaciones -->
-  <rect x="720" y="600" width="260" height="80" class="ok"/>
+  <rect x="720" y="600" width="260" height="90" class="ok"/>
   <text x="740" y="635" class="label">Liquidaciones mensuales automáticas</text>
-  <text x="740" y="656" class="small">Generación de recibos y archivo de pago</text>
+  <text x="740" y="656" class="small">
+    <tspan x="740" dy="0">Generación de recibos</tspan>
+    <tspan x="740" dy="18">y archivo de pago</tspan>
+  </text>
 
   <!-- Tablero -->
   <rect x="1020" y="600" width="200" height="80" class="ok"/>

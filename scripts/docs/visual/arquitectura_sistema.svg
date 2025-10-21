@@ -40,9 +40,15 @@
   <text x="370" y="235" class="small">Autenticación y permisos por rol</text>
 
   <!-- API/Servicios -->
-  <rect x="660" y="150" width="240" height="140" class="card"/>
-  <text x="680" y="185" class="label">Procesos internos y automatización</text>
-  <text x="680" y="205" class="small">Control de procesos y trazabilidad</text>
+  <rect x="660" y="150" width="260" height="140" class="card"/>
+  <text x="680" y="180" class="label">
+    <tspan x="680" dy="0">Procesos internos</tspan>
+    <tspan x="680" dy="20">y automatización</tspan>
+  </text>
+  <text x="680" y="210" class="small">
+    <tspan x="680" dy="0">Control de procesos</tspan>
+    <tspan x="680" dy="18">y trazabilidad</tspan>
+  </text>
 
   <!-- Datos -->
   <rect x="960" y="90" width="280" height="420" class="group"/>
