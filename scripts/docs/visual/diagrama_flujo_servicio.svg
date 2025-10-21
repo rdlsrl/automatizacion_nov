@@ -129,8 +129,8 @@
   <text x="1020" y="672" class="small">Ventas, márgenes y alertas operativas</text>
 
   <!-- Flechas -->
-  <line x1="280" y1="155" x2="210" y2="155" class="arrow"/>
-  <line x1="470" y1="155" x2="520" y2="155" class="arrow"/>
+  <path d="M 280 155 Q 310 135 340 120" class="arrow"/>
+  <path d="M 470 155 Q 495 135 520 140" class="arrow"/>
   <line x1="750" y1="155" x2="800" y2="155" class="arrow"/>
   <line x1="880" y1="190" x2="880" y2="210" class="arrow"/>
   <line x1="1025" y1="155" x2="1040" y2="116" class="arrow"/>
