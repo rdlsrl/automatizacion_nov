@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="900" viewBox="0 0 1280 900">
+  <defs>
+    <style>
+      .title{font:700 22px 'Segoe UI',Roboto,Arial,sans-serif;fill:#111}
+      .label{font:600 16px 'Segoe UI',Roboto,Arial,sans-serif;fill:#111}
+      .small{font:400 13px 'Segoe UI',Roboto,Arial,sans-serif;fill:#374151}
+      .box{fill:#fff;stroke:#e5e7eb;stroke-width:2;rx:12;ry:12;filter:url(#shadow)}
+      .decision{fill:#fff;stroke:#e5e7eb;stroke-width:2}
+      .lane{fill:#f9fafb;stroke:#e5e7eb;stroke-width:1}
+      .pill{fill:#eef2ff;stroke:#c7d2fe;stroke-width:1}
+      .arrow{stroke:#6b7280;stroke-width:2;marker-end:url(#arrow)}
+      .alert{fill:#fff7ed;stroke:#fdba74;stroke-width:2;rx:10;ry:10}
+      .ok{fill:#ecfdf5;stroke:#a7f3d0;stroke-width:2;rx:10;ry:10}
+    </style>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#6b7280"/>
+    </marker>
+  </defs>
+
+  <text x="40" y="48" class="title">Diagrama de Flujo — Servicio Funerario (visión simple)</text>
+
+  <!-- Carriles -->
+  <rect x="20" y="70" width="1240" height="220" class="lane"/>
+  <text x="30" y="90" class="small">Secretaría / Administración</text>
+  <rect x="20" y="310" width="1240" height="210" class="lane"/>
+  <text x="30" y="330" class="small">Operaciones / Chofer</text>
+  <rect x="20" y="540" width="1240" height="320" class="lane"/>
+  <text x="30" y="560" class="small">Backoffice: Pagos, RR.HH., Notificaciones</text>
+
+  <!-- Inicio -->
+  <rect x="80" y="120" width="200" height="70" class="box"/>
+  <text x="100" y="155" class="label">Recepción</text>
+  <text x="100" y="176" class="small">Crea Contrato/Cotización</text>
+
+  <!-- Validación -->
+  <polygon points="340,120 470,155 340,190 210,155" class="decision"/>
+  <text x="280" y="155" class="label">¿Datos y</text>
+  <text x="262" y="175" class="label">documentos OK?</text>
+
+  <!-- Falta Doc Alert -->
+  <rect x="250" y="210" width="220" height="60" class="alert"/>
+  <text x="262" y="246" class="small">Alerta: faltan adjuntos / firmas</text>
+
+  <!-- Inventario -->
+  <rect x="520" y="120" width="230" height="70" class="box"/>
+  <text x="540" y="155" class="label">Asignación de Inventario</text>
+  <text x="540" y="176" class="small">Ataúd, sala, flores, etc.</text>
+
+  <!-- Stock bajo alert -->
+  <rect x="540" y="210" width="190" height="60" class="alert"/>
+  <text x="550" y="246" class="small">Stock bajo → reposición</text>
+
+  <!-- Planificación -->
+  <rect x="800" y="120" width="250" height="70" class="box"/>
+  <text x="820" y="155" class="label">Planificación del Servicio</text>
+  <text x="820" y="176" class="small">Chofer, horarios, traslados</text>
+
+  <!-- Notificación chofer pill -->
+  <rect x="1040" y="100" width="180" height="32" class="pill"/>
+  <text x="1050" y="122" class="small">Notifica a chofer (WhatsApp)</text>
+
+  <!-- Ejecución -->
+  <rect x="200" y="360" width="240" height="70" class="box"/>
+  <text x="220" y="395" class="label">Ejecución del Servicio</text>
+  <text x="220" y="416" class="small">Checklists, tiempos, fotos</text>
+
+  <!-- Cierre -->
+  <rect x="500" y="360" width="240" height="70" class="box"/>
+  <text x="520" y="395" class="label">Cierre y Documentación</text>
+  <text x="520" y="416" class="small">Acta, firma, adjuntos</text>
+
+  <!-- Facturación -->
+  <rect x="800" y="360" width="240" height="70" class="box"/>
+  <text x="820" y="395" class="label">Facturación y Pagos</text>
+  <text x="820" y="416" class="small">Comprobantes, conciliación</text>
+
+  <!-- Impago alert -->
+  <rect x="810" y="450" width="220" height="60" class="alert"/>
+  <text x="822" y="486" class="small">Alerta: impago → cobranza</text>
+
+  <!-- Notificaciones post -->
+  <rect x="80" y="600" width="290" height="80" class="ok"/>
+  <text x="100" y="635" class="label">Post-servicio automático</text>
+  <text x="100" y="656" class="small">Tips (+4h), Tarjeta (+5d), Encuesta (+8d)</text>
+
+  <!-- RRHH -->
+  <rect x="420" y="600" width="260" height="80" class="ok"/>
+  <text x="440" y="635" class="label">RR.HH. y Asistencias</text>
+  <text x="440" y="656" class="small">Marcaciones, bonos noche/feriado</text>
+
+  <!-- Liquidaciones -->
+  <rect x="720" y="600" width="260" height="80" class="ok"/>
+  <text x="740" y="635" class="label">Liquidaciones Mensuales</text>
+  <text x="740" y="656" class="small">PDF y archivo bancario</text>
+
+  <!-- Tablero -->
+  <rect x="1020" y="600" width="200" height="80" class="ok"/>
+  <text x="1040" y="635" class="label">Panel y Reportes</text>
+  <text x="1040" y="656" class="small">Ventas, márgenes, alertas</text>
+
+  <!-- Flechas -->
+  <line x1="280" y1="155" x2="340" y2="155" class="arrow"/>
+  <line x1="470" y1="155" x2="520" y2="155" class="arrow"/>
+  <line x1="750" y1="155" x2="800" y2="155" class="arrow"/>
+  <line x1="880" y1="190" x2="880" y2="210" class="arrow"/>
+  <line x1="1025" y1="155" x2="1040" y2="116" class="arrow"/>
+
+  <line x1="320" y1="190" x2="320" y2="210" class="arrow"/>
+
+  <line x1="420" y1="395" x2="500" y2="395" class="arrow"/>
+  <line x1="740" y1="395" x2="800" y2="395" class="arrow"/>
+  <line x1="920" y1="430" x2="920" y2="450" class="arrow"/>
+
+  <line x1="240" y1="430" x2="240" y2="600" class="arrow"/>
+  <line x1="560" y1="430" x2="560" y2="600" class="arrow"/>
+  <line x1="880" y1="520" x2="880" y2="600" class="arrow"/>
+  <line x1="980" y1="640" x2="1020" y2="640" class="arrow"/>
+
+  <!-- Conectores Sí/No decisión -->
+  <text x="440" y="145" class="small">Sí</text>
+  <text x="300" y="205" class="small">No</text>
+</svg>

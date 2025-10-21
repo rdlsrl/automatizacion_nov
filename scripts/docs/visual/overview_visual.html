@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resumen visual — Sistema Funeraria</title>
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;margin:24px;background:#f9fafb;color:#111}
+    h1,h2{margin:.4em 0}
+    .card{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:18px;margin:16px 0;box-shadow:0 6px 18px rgba(0,0,0,.06)}
+    .muted{color:#6b7280}
+    .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+    .legend{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
+    .pill{background:#eef2ff;border:1px solid #c7d2fe;color:#3730a3;border-radius:999px;padding:4px 10px;font-size:12px}
+    figure{margin:0}
+    figcaption{margin-top:6px;color:#6b7280;font-size:.95em}
+    img{max-width:100%;height:auto;border-radius:10px;border:1px solid #e5e7eb;background:#fff}
+    .cta{display:flex;gap:8px;flex-wrap:wrap}
+    .btn{background:#111;color:#fff;border:none;border-radius:10px;padding:10px 14px;cursor:pointer}
+    .btn.secondary{background:#eef2ff;color:#3730a3;border:1px solid #c7d2fe}
+  </style>
+</head>
+<body>
+  <h1>Resumen visual — Sistema de Gestión Funeraria</h1>
+  <p class="muted">Versión con gráficos lista para enviar a no técnicos (todo funciona sin internet).</p>
+
+  <div class="card">
+    <h2>Qué incluye</h2>
+    <div class="legend">
+      <span class="pill">Diagrama de flujo (operación)</span>
+      <span class="pill">Arquitectura (alto nivel)</span>
+      <span class="pill">Texto breve y claro</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>1) Diagrama de flujo profesional (simple de entender)</h2>
+    <figure>
+      <img src="diagrama_flujo_servicio.svg" alt="Diagrama de flujo del servicio funerario" />
+      <figcaption>Desde recepción hasta liquidaciones y reportes, con alertas por faltantes, impagos y stock bajo.</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>2) Arquitectura (alto nivel)</h2>
+    <figure>
+      <img src="arquitectura_sistema.svg" alt="Arquitectura del sistema funeraria" />
+      <figcaption>Usuarios → Aplicación Web → API → Base de Datos/Archivos/Notificaciones/Contabilidad.</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>3) Narrativa para el Sr.</h2>
+    <div class="grid">
+      <div>
+        <h3>Cómo se atiende y se ejecuta</h3>
+        <ul>
+          <li>La secretaría registra el contrato y adjunta documentos.</li>
+          <li>El sistema reserva inventario y planifica el servicio.</li>
+          <li>El chofer recibe instrucciones automáticas por WhatsApp.</li>
+          <li>Tras el servicio, se cierra con firmas y comprobantes.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Cómo se controla y se paga</h3>
+        <ul>
+          <li>Alertas por impagos, documentos faltantes o stock bajo.</li>
+          <li>Conciliación de pagos y emisión de recibos.</li>
+          <li>Liquidaciones mensuales: base + comisiones + bonos.</li>
+          <li>Panel con ventas, márgenes y desviaciones.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="card cta">
+    <button class="btn" onclick="window.print()">Imprimir / Guardar como PDF</button>
+    <a class="btn secondary" href="overview_simplificado.html">Ver versión solo texto</a>
+    <a class="btn secondary" href="funeral_system_overview.html">Ver versión técnica (Mermaid)</a>
+  </div>
+
+  <p class="muted">Tip: podés abrir este archivo en cualquier navegador y exportarlo a PDF para compartir por WhatsApp o Email.</p>
+</body>
+</html>
