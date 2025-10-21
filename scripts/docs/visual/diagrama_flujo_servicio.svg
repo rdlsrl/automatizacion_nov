@@ -44,8 +44,8 @@
   </text>
 
   <!-- Falta Doc Alert -->
-  <rect x="250" y="210" width="240" height="60" class="alert"/>
-  <text x="262" y="238" class="small">
+  <rect x="250" y="220" width="240" height="70" class="alert"/>
+  <text x="262" y="248" class="small">
     <tspan x="262" dy="0">Alerta de faltantes o</tspan>
     <tspan x="262" dy="18">documentos incompletos</tspan>
   </text>
@@ -121,12 +121,12 @@
   </text>
 
   <!-- Tablero -->
-  <rect x="1020" y="600" width="220" height="90" class="ok"/>
-  <text x="1040" y="632" class="label">
-    <tspan x="1040" dy="0">Panel general y</tspan>
-    <tspan x="1040" dy="20">reportes automáticos</tspan>
+  <rect x="1000" y="600" width="240" height="90" class="ok"/>
+  <text x="1020" y="632" class="label">
+    <tspan x="1020" dy="0">Panel general y</tspan>
+    <tspan x="1020" dy="20">reportes automáticos</tspan>
   </text>
-  <text x="1040" y="672" class="small">Ventas, márgenes y alertas operativas</text>
+  <text x="1020" y="672" class="small">Ventas, márgenes y alertas operativas</text>
 
   <!-- Flechas -->
   <line x1="280" y1="170" x2="340" y2="170" class="arrow"/>
@@ -144,9 +144,9 @@
   <line x1="240" y1="430" x2="240" y2="600" class="arrow"/>
   <line x1="560" y1="430" x2="560" y2="600" class="arrow"/>
   <line x1="880" y1="520" x2="880" y2="600" class="arrow"/>
-  <line x1="980" y1="640" x2="1020" y2="640" class="arrow"/>
+  <line x1="980" y1="640" x2="1000" y2="640" class="arrow"/>
 
   <!-- Conectores Sí/No decisión -->
-  <text x="440" y="145" class="small">Sí</text>
-  <text x="300" y="205" class="small">No</text>
+  <text x="455" y="135" class="small">Sí</text>
+  <text x="285" y="208" class="small">No</text>
 </svg>
