@@ -65,8 +65,11 @@
   <text x="820" y="176" class="small">Chofer, horarios, traslados</text>
 
   <!-- Notificación chofer pill -->
-  <rect x="1040" y="100" width="220" height="32" class="pill"/>
-  <text x="1050" y="122" class="small">Aviso automático al chofer (WhatsApp)</text>
+  <rect x="1040" y="100" width="240" height="44" class="pill"/>
+  <text x="1050" y="118" class="small">
+    <tspan x="1050" dy="0">Aviso automático al chofer</tspan>
+    <tspan x="1050" dy="18">(WhatsApp)</tspan>
+  </text>
 
   <!-- Ejecución -->
   <rect x="200" y="360" width="240" height="70" class="box"/>
@@ -84,8 +87,11 @@
   <text x="820" y="416" class="small">Comprobantes, conciliación</text>
 
   <!-- Impago alert -->
-  <rect x="810" y="450" width="220" height="60" class="alert"/>
-  <text x="822" y="486" class="small">Alerta de impagos o cobranzas pendientes</text>
+  <rect x="810" y="450" width="240" height="60" class="alert"/>
+  <text x="820" y="478" class="small">
+    <tspan x="820" dy="0">Alerta de impagos</tspan>
+    <tspan x="820" dy="18">o cobranzas pendientes</tspan>
+  </text>
 
   <!-- Notificaciones post -->
   <rect x="80" y="600" width="290" height="90" class="ok"/>
