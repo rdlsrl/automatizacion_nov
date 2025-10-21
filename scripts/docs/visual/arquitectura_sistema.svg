@@ -2,12 +2,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="600" viewBox="0 0 1280 600">
   <defs>
     <style>
-      .title{font:700 22px 'Segoe UI',Roboto,Arial,sans-serif;fill:#111}
-      .label{font:600 16px 'Segoe UI',Roboto,Arial,sans-serif;fill:#111}
-      .small{font:400 13px 'Segoe UI',Roboto,Arial,sans-serif;fill:#374151}
-      .card{fill:#fff;stroke:#e5e7eb;stroke-width:2;rx:14;ry:14;filter:url(#shadow)}
+      .title{font:700 22px 'Segoe UI',Arial,sans-serif;fill:#003366}
+      .label{font:600 16px 'Segoe UI',Arial,sans-serif;fill:#333333}
+      .small{font:400 13px 'Segoe UI',Arial,sans-serif;fill:#555555}
+      .card{fill:#fff;stroke:#e5e7eb;stroke-width:1.5;rx:14;ry:14;filter:url(#shadow)}
       .group{fill:#f9fafb;stroke:#e5e7eb;stroke-width:1}
-      .arrow{stroke:#6b7280;stroke-width:2;marker-end:url(#arrow)}
+      .arrow{stroke:#6b7280;stroke-width:1.5;marker-end:url(#arrow)}
       .pill{fill:#ecfeff;stroke:#a5f3fc;stroke-width:1}
     </style>
     <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
