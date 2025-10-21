@@ -38,9 +38,9 @@
 
   <!-- Validación -->
   <polygon points="340,120 470,155 340,190 210,155" class="decision"/>
-  <text x="240" y="148" class="label">
-    <tspan x="240" dy="0">Validación de datos</tspan>
-    <tspan x="240" dy="20">y documentos</tspan>
+  <text x="280" y="146" class="label">
+    <tspan x="280" dy="0">Validación de datos</tspan>
+    <tspan x="280" dy="20">y documentos</tspan>
   </text>
 
   <!-- Falta Doc Alert -->
@@ -102,22 +102,31 @@
   </text>
 
   <!-- RRHH -->
-  <rect x="420" y="600" width="260" height="80" class="ok"/>
-  <text x="440" y="635" class="label">Recursos Humanos / Control de asistencia</text>
-  <text x="440" y="656" class="small">Registro de horarios y bonificaciones</text>
+  <rect x="420" y="600" width="260" height="90" class="ok"/>
+  <text x="440" y="632" class="label">
+    <tspan x="440" dy="0">Recursos Humanos /</tspan>
+    <tspan x="440" dy="20">Control de asistencia</tspan>
+  </text>
+  <text x="440" y="672" class="small">Registro de horarios y bonificaciones</text>
 
   <!-- Liquidaciones -->
-  <rect x="720" y="600" width="260" height="90" class="ok"/>
-  <text x="740" y="635" class="label">Liquidaciones mensuales automáticas</text>
-  <text x="740" y="656" class="small">
+  <rect x="720" y="600" width="260" height="100" class="ok"/>
+  <text x="740" y="632" class="label">
+    <tspan x="740" dy="0">Liquidaciones mensuales</tspan>
+    <tspan x="740" dy="20">automáticas</tspan>
+  </text>
+  <text x="740" y="672" class="small">
     <tspan x="740" dy="0">Generación de recibos</tspan>
     <tspan x="740" dy="18">y archivo de pago</tspan>
   </text>
 
   <!-- Tablero -->
-  <rect x="1020" y="600" width="200" height="80" class="ok"/>
-  <text x="1040" y="635" class="label">Panel general y reportes automáticos</text>
-  <text x="1040" y="656" class="small">Ventas, márgenes y alertas operativas</text>
+  <rect x="1020" y="600" width="220" height="90" class="ok"/>
+  <text x="1040" y="632" class="label">
+    <tspan x="1040" dy="0">Panel general y</tspan>
+    <tspan x="1040" dy="20">reportes automáticos</tspan>
+  </text>
+  <text x="1040" y="672" class="small">Ventas, márgenes y alertas operativas</text>
 
   <!-- Flechas -->
   <line x1="280" y1="155" x2="340" y2="155" class="arrow"/>
