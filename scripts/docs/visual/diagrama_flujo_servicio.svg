@@ -129,8 +129,8 @@
   <text x="1020" y="672" class="small">Ventas, márgenes y alertas operativas</text>
 
   <!-- Flechas -->
-  <line x1="280" y1="170" x2="340" y2="170" class="arrow"/>
-  <line x1="470" y1="140" x2="520" y2="140" class="arrow"/>
+  <line x1="280" y1="155" x2="210" y2="155" class="arrow"/>
+  <line x1="470" y1="155" x2="520" y2="155" class="arrow"/>
   <line x1="750" y1="155" x2="800" y2="155" class="arrow"/>
   <line x1="880" y1="190" x2="880" y2="210" class="arrow"/>
   <line x1="1025" y1="155" x2="1040" y2="116" class="arrow"/>
@@ -147,6 +147,6 @@
   <line x1="980" y1="640" x2="1000" y2="640" class="arrow"/>
 
   <!-- Conectores Sí/No decisión -->
-  <text x="455" y="135" class="small">Sí</text>
-  <text x="285" y="208" class="small">No</text>
+  <text x="490" y="142" class="small">Sí</text>
+  <text x="330" y="205" class="small">No</text>
 </svg>
