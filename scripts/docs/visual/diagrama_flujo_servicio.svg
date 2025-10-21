@@ -38,9 +38,9 @@
 
   <!-- Validación -->
   <polygon points="340,120 470,155 340,190 210,155" class="decision"/>
-  <text x="280" y="146" class="label">
-    <tspan x="280" dy="0">Validación de datos</tspan>
-    <tspan x="280" dy="20">y documentos</tspan>
+  <text x="340" y="146" class="label" text-anchor="middle" style="font-size:15px">
+    <tspan x="340" dy="0">Validación de datos</tspan>
+    <tspan x="340" dy="20">y documentos</tspan>
   </text>
 
   <!-- Falta Doc Alert -->
