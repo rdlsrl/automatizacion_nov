@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resumen simple — Sistema Funeraria</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 24px; background: #f9fafb; color: #222; }
+    h1,h2,h3{ margin: 0.4em 0; }
+    .card { background: #fff; border-radius: 12px; padding: 18px; margin: 16px 0; box-shadow: 0 6px 18px rgba(0,0,0,.06); }
+    .grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    .pill { display: inline-block; background: #eef2ff; color: #3730a3; padding: 6px 10px; border-radius: 999px; font-size: 12px; margin-right: 8px; }
+    .box { border: 1px solid #e5e7eb; border-radius: 10px; padding: 12px; background: #fcfcfd; }
+    .arrow { color: #6b7280; font-family: monospace; white-space: pre; }
+    ul { margin: .4em 0 .6em 1.2em; }
+    .muted { color: #6b7280; font-size: .95em; }
+  </style>
+</head>
+<body>
+  <h1>Resumen simple — Sistema de Gestión Funeraria</h1>
+  <p class="muted">Versión sin gráficos técnicos. Ideal para compartir con equipo no técnico.</p>
+
+  <div class="card">
+    <h2>1) ¿Qué es cada cosa?</h2>
+    <div class="grid">
+      <div class="box">
+        <span class="pill">Usuarios</span>
+        Dueño, Administración, Secretarías, Choferes (cada uno con permisos).
+      </div>
+      <div class="box">
+        <span class="pill">App Web</span>
+        Pantallas para contratos, inventario, pagos, RR.HH., panel y reportes.
+      </div>
+      <div class="box">
+        <span class="pill">Base de datos</span>
+        Guarda contratos, clientes, productos, pagos, empleados, liquidaciones.
+      </div>
+      <div class="box">
+        <span class="pill">Archivos</span>
+        Contratos, autorizaciones, facturas, fotos (respaldados en la nube).
+      </div>
+      <div class="box">
+        <span class="pill">Notificaciones</span>
+        Mensajes automáticos (WhatsApp) a familia y chofer de turno.
+      </div>
+      <div class="box">
+        <span class="pill">Contabilidad</span>
+        Exporta a tu sistema o banco para conciliación y estados.
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>2) Cómo fluye la información (paso a paso)</h2>
+    <pre class="arrow">
+Secretaría crea CONVENIO/COTIZACIÓN/CONTRATO
+  └─> Se guardan datos en la Base de Datos
+      └─> Descuentos / Forma de pago / Adjuntos
+          └─> Si hay productos, descuenta de Inventario
+
+A fin de mes Administración aprieta “Calcular Liquidaciones”
+  └─> El sistema calcula sueldo base + comisiones + bonos (noche/feriado/meta)
+      └─> Genera PDF listo para pagar + archivo para el banco
+
+En paralelo: Notificaciones automáticas
+  └─> Al chofer: instrucciones del servicio
+  └─> A la familia: tips (+4h), tarjeta (+5d), encuesta (+8d), oficios (+30d), aniversario (+1a)
+    </pre>
+  </div>
+
+  <div class="card">
+    <h2>3) Panel de control (qué veo)</h2>
+    <ul>
+      <li>Ventas del mes (por sucursal/secretaría/servicio)</li>
+      <li>Gastos por ítem (publicidad, combustible, insumos) y desviaciones</li>
+      <li>Rentabilidad y márgenes por servicio</li>
+      <li>Alertas: contratos impagos, stock bajo, documentos faltantes</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>4) ¿Qué hace fácil la administración?</h2>
+    <ul>
+      <li>Contrato único: los datos sirven para nómina, inventario y contabilidad</li>
+      <li>Botón de liquidaciones y botón de cierre mensual (PDF y export contable)</li>
+      <li>Adjuntos y respaldo automático (todo queda guardado con historial)</li>
+      <li>Mensajes automáticos: menos llamados manuales, más seguimiento</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>5) Glosario mínimo</h2>
+    <ul>
+      <li><b>Contrato</b>: acuerdo con el cliente (número, fecha y hora, descuentos, servicios)</li>
+      <li><b>Inventario</b>: productos y stock por bodega (rebaje automático)</li>
+      <li><b>Liquidación</b>: cálculo mensual por empleado (base, comisiones, bonos, adelantos)</li>
+      <li><b>Auditoría</b>: registro de quién cambió qué y cuándo</li>
+      <li><b>Copia en la nube</b>: respaldo automático de datos y archivos</li>
+    </ul>
+  </div>
+
+  <p class="muted">¿Querés la versión con gráficos? Abrí el archivo “funeral_system_overview.html” o el Markdown en GitHub.</p>
+</body>
+</html>
