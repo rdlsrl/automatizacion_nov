@@ -21,7 +21,7 @@
     </marker>
   </defs>
 
-  <text x="40" y="48" class="title">Diagrama de Flujo — Servicio Funerario (visión simple)</text>
+  <text x="40" y="48" class="title">Flujo del servicio funerario — vista general del proceso</text>
 
   <!-- Carriles -->
   <rect x="20" y="70" width="1240" height="220" class="lane"/>
@@ -38,12 +38,11 @@
 
   <!-- Validación -->
   <polygon points="340,120 470,155 340,190 210,155" class="decision"/>
-  <text x="280" y="155" class="label">¿Datos y</text>
-  <text x="262" y="175" class="label">documentos OK?</text>
+  <text x="240" y="155" class="label">Validación de datos y documentos</text>
 
   <!-- Falta Doc Alert -->
   <rect x="250" y="210" width="220" height="60" class="alert"/>
-  <text x="262" y="246" class="small">Alerta: faltan adjuntos / firmas</text>
+  <text x="262" y="246" class="small">Alerta de faltantes o documentos incompletos</text>
 
   <!-- Inventario -->
   <rect x="520" y="120" width="230" height="70" class="box"/>
@@ -52,7 +51,7 @@
 
   <!-- Stock bajo alert -->
   <rect x="540" y="210" width="190" height="60" class="alert"/>
-  <text x="550" y="246" class="small">Stock bajo → reposición</text>
+  <text x="550" y="246" class="small">Reposición automática de stock</text>
 
   <!-- Planificación -->
   <rect x="800" y="120" width="250" height="70" class="box"/>
@@ -61,7 +60,7 @@
 
   <!-- Notificación chofer pill -->
   <rect x="1040" y="100" width="180" height="32" class="pill"/>
-  <text x="1050" y="122" class="small">Notifica a chofer (WhatsApp)</text>
+  <text x="1050" y="122" class="small">Aviso automático al chofer (WhatsApp)</text>
 
   <!-- Ejecución -->
   <rect x="200" y="360" width="240" height="70" class="box"/>
@@ -75,32 +74,32 @@
 
   <!-- Facturación -->
   <rect x="800" y="360" width="240" height="70" class="box"/>
-  <text x="820" y="395" class="label">Facturación y Pagos</text>
+  <text x="820" y="395" class="label">Facturación y cobros</text>
   <text x="820" y="416" class="small">Comprobantes, conciliación</text>
 
   <!-- Impago alert -->
   <rect x="810" y="450" width="220" height="60" class="alert"/>
-  <text x="822" y="486" class="small">Alerta: impago → cobranza</text>
+  <text x="822" y="486" class="small">Alerta de impagos o cobranzas pendientes</text>
 
   <!-- Notificaciones post -->
   <rect x="80" y="600" width="290" height="80" class="ok"/>
-  <text x="100" y="635" class="label">Post-servicio automático</text>
-  <text x="100" y="656" class="small">Tips (+4h), Tarjeta (+5d), Encuesta (+8d)</text>
+  <text x="100" y="635" class="label">Seguimiento automático post-servicio</text>
+  <text x="100" y="656" class="small">Envíos automáticos programados (agradecimientos, encuestas, recordatorios)</text>
 
   <!-- RRHH -->
   <rect x="420" y="600" width="260" height="80" class="ok"/>
-  <text x="440" y="635" class="label">RR.HH. y Asistencias</text>
-  <text x="440" y="656" class="small">Marcaciones, bonos noche/feriado</text>
+  <text x="440" y="635" class="label">Recursos Humanos / Control de asistencia</text>
+  <text x="440" y="656" class="small">Registro de horarios y bonificaciones</text>
 
   <!-- Liquidaciones -->
   <rect x="720" y="600" width="260" height="80" class="ok"/>
-  <text x="740" y="635" class="label">Liquidaciones Mensuales</text>
-  <text x="740" y="656" class="small">PDF y archivo bancario</text>
+  <text x="740" y="635" class="label">Liquidaciones mensuales automáticas</text>
+  <text x="740" y="656" class="small">Generación de recibos y archivo de pago</text>
 
   <!-- Tablero -->
   <rect x="1020" y="600" width="200" height="80" class="ok"/>
-  <text x="1040" y="635" class="label">Panel y Reportes</text>
-  <text x="1040" y="656" class="small">Ventas, márgenes, alertas</text>
+  <text x="1040" y="635" class="label">Panel general y reportes automáticos</text>
+  <text x="1040" y="656" class="small">Ventas, márgenes y alertas operativas</text>
 
   <!-- Flechas -->
   <line x1="280" y1="155" x2="340" y2="155" class="arrow"/>

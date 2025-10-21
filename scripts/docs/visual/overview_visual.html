@@ -21,53 +21,54 @@
   </style>
 </head>
 <body>
-  <h1>Resumen visual — Sistema de Gestión Funeraria</h1>
-  <p class="muted">Versión con gráficos lista para enviar a no técnicos (todo funciona sin internet).</p>
+  <h1>Esquema visual — Sistema de Gestión Funeraria</h1>
+  <p class="muted">Vista general del proceso operativo y la estructura del sistema.</p>
+  <p class="muted">Ilustra cómo cada módulo automatiza tareas y centraliza información clave.</p>
 
   <div class="card">
-    <h2>Qué incluye</h2>
+    <h2>Contenido</h2>
     <div class="legend">
-      <span class="pill">Diagrama de flujo (operación)</span>
-      <span class="pill">Arquitectura (alto nivel)</span>
-      <span class="pill">Texto breve y claro</span>
+      <span class="pill">Flujo operativo</span>
+      <span class="pill">Estructura general del sistema</span>
+      <span class="pill">Resumen ejecutivo</span>
     </div>
   </div>
 
   <div class="card">
-    <h2>1) Diagrama de flujo profesional (simple de entender)</h2>
+    <h2>1) Flujo operativo del servicio (visión general)</h2>
     <figure>
-      <img src="diagrama_flujo_servicio.svg" alt="Diagrama de flujo del servicio funerario" />
-      <figcaption>Desde recepción hasta liquidaciones y reportes, con alertas por faltantes, impagos y stock bajo.</figcaption>
+      <img src="diagrama_flujo_servicio.svg" alt="Flujo del servicio funerario — vista general del proceso" />
+      <figcaption>El sistema abarca todo el proceso: desde la recepción del servicio hasta las liquidaciones y reportes, generando alertas automáticas ante faltantes, impagos o bajo stock.</figcaption>
     </figure>
   </div>
 
   <div class="card">
-    <h2>2) Arquitectura (alto nivel)</h2>
+    <h2>2) Estructura general del sistema</h2>
     <figure>
       <img src="arquitectura_sistema.svg" alt="Arquitectura del sistema funeraria" />
-      <figcaption>Usuarios → Aplicación Web → API → Base de Datos/Archivos/Notificaciones/Contabilidad.</figcaption>
+      <figcaption>Vista integral de módulos y flujo de información.</figcaption>
     </figure>
   </div>
 
   <div class="card">
-    <h2>3) Narrativa para el Sr.</h2>
+    <h2>3) Resumen ejecutivo — flujo y control</h2>
     <div class="grid">
       <div>
-        <h3>Cómo se atiende y se ejecuta</h3>
+        <h3>Ejecución del servicio</h3>
         <ul>
-          <li>La secretaría registra el contrato y adjunta documentos.</li>
-          <li>El sistema reserva inventario y planifica el servicio.</li>
-          <li>El chofer recibe instrucciones automáticas por WhatsApp.</li>
-          <li>Tras el servicio, se cierra con firmas y comprobantes.</li>
+          <li>La secretaría registra el contrato y adjunta la documentación correspondiente.</li>
+          <li>El sistema reserva inventario y planifica automáticamente cada servicio.</li>
+          <li>Los choferes reciben instrucciones automáticas vía WhatsApp.</li>
+          <li>Una vez finalizado el servicio, se genera el cierre con firmas y comprobantes digitales.</li>
         </ul>
       </div>
       <div>
-        <h3>Cómo se controla y se paga</h3>
+        <h3>Control administrativo y financiero</h3>
         <ul>
-          <li>Alertas por impagos, documentos faltantes o stock bajo.</li>
-          <li>Conciliación de pagos y emisión de recibos.</li>
-          <li>Liquidaciones mensuales: base + comisiones + bonos.</li>
-          <li>Panel con ventas, márgenes y desviaciones.</li>
+          <li>Alertas automáticas ante impagos, documentos faltantes o stock bajo.</li>
+          <li>Conciliación de pagos y generación automática de recibos.</li>
+          <li>Liquidaciones mensuales completas (salario base, comisiones y bonos).</li>
+          <li>Panel consolidado con ventas, márgenes y desvíos contables.</li>
         </ul>
       </div>
     </div>
@@ -76,9 +77,12 @@
   <div class="card cta">
     <button class="btn" onclick="window.print()">Imprimir / Guardar como PDF</button>
     <a class="btn secondary" href="overview_simplificado.html">Ver versión solo texto</a>
-    <a class="btn secondary" href="funeral_system_overview.html">Ver versión técnica (Mermaid)</a>
   </div>
 
-  <p class="muted">Tip: podés abrir este archivo en cualquier navegador y exportarlo a PDF para compartir por WhatsApp o Email.</p>
+  <div class="card">
+    <h2>Conclusión</h2>
+    <p>Este esquema resume cómo el sistema automatiza la gestión completa de la empresa, desde la carga de contratos hasta la contabilidad y la comunicación con clientes y personal.</p>
+    <p>La implementación es modular, escalable y adaptable a los procesos actuales sin afectar la operación diaria.</p>
+  </div>
 </body>
 </html>

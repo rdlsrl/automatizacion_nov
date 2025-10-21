@@ -18,7 +18,7 @@
     </marker>
   </defs>
 
-  <text x="40" y="48" class="title">Arquitectura — Sistema de Gestión Funeraria (alto nivel)</text>
+  <text x="40" y="48" class="title">Estructura general del sistema — Sistema de Gestión Funeraria</text>
 
   <!-- Usuarios -->
   <rect x="40" y="90" width="240" height="420" class="group"/>
@@ -34,33 +34,33 @@
 
   <!-- App Web -->
   <rect x="340" y="150" width="260" height="140" class="card"/>
-  <text x="360" y="185" class="label">Aplicación Web</text>
+  <text x="360" y="185" class="label">Sistema Web</text>
   <text x="360" y="205" class="small">Contratos, Inventario, RR.HH., Panel</text>
   <rect x="360" y="215" width="220" height="28" class="pill"/>
   <text x="370" y="235" class="small">Autenticación y permisos por rol</text>
 
   <!-- API/Servicios -->
   <rect x="660" y="150" width="240" height="140" class="card"/>
-  <text x="680" y="185" class="label">API y Servicios</text>
-  <text x="680" y="205" class="small">Validaciones, lógica, auditoría</text>
+  <text x="680" y="185" class="label">Procesos internos y automatización</text>
+  <text x="680" y="205" class="small">Control de procesos y trazabilidad</text>
 
   <!-- Datos -->
   <rect x="960" y="90" width="280" height="420" class="group"/>
   <text x="970" y="112" class="small">Datos y Salidas</text>
   <rect x="980" y="140" width="240" height="80" class="card"/>
-  <text x="1000" y="175" class="label">Base de Datos</text>
+  <text x="1000" y="175" class="label">Base de datos y reportes</text>
   <text x="1000" y="195" class="small">Contratos, clientes, empleados…</text>
 
   <rect x="980" y="240" width="240" height="70" class="card"/>
-  <text x="1000" y="275" class="label">Almacenamiento</text>
+  <text x="1000" y="275" class="label">Gestión de archivos</text>
   <text x="1000" y="295" class="small">Adjuntos y respaldos</text>
 
   <rect x="980" y="330" width="240" height="70" class="card"/>
-  <text x="1000" y="365" class="label">Notificaciones</text>
+  <text x="1000" y="365" class="label">Comunicaciones automáticas</text>
   <text x="1000" y="385" class="small">WhatsApp/Email programados</text>
 
   <rect x="980" y="420" width="240" height="70" class="card"/>
-  <text x="1000" y="455" class="label">Contabilidad</text>
+  <text x="1000" y="455" class="label">Contabilidad y finanzas integradas</text>
   <text x="1000" y="475" class="small">Export bancario/ERP</text>
 
   <!-- Flechas -->
