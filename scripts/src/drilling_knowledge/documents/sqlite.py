@@ -212,8 +212,36 @@ class SQLiteDocumentRepository:
             (document_id,),
         ).fetchone()
         incoming_document = to_json(snapshot.document)
-        if persisted_version["payload_json"] == incoming_version and (persisted_document is None or persisted_document["payload_json"] == incoming_document):
-            return
+
+        same_document_and_version = (
+            persisted_version["payload_json"] == incoming_version
+            and (persisted_document is None or persisted_document["payload_json"] == incoming_document)
+        )
+
+        if same_document_and_version:
+            persisted_snapshot = self._hydrate_snapshot(
+                connection,
+                persisted_document["payload_json"] if persisted_document is not None else incoming_document,
+                persisted_version["payload_json"],
+            )
+
+            def keyed_payloads(items):
+                return {
+                    str(item.entity_id): to_json(item)
+                    for item in items
+                }
+
+            structure_unchanged = (
+                keyed_payloads(persisted_snapshot.sections) == keyed_payloads(snapshot.sections)
+                and keyed_payloads(persisted_snapshot.fragments) == keyed_payloads(snapshot.fragments)
+                and keyed_payloads(persisted_snapshot.tables) == keyed_payloads(snapshot.tables)
+                and keyed_payloads(persisted_snapshot.figures) == keyed_payloads(snapshot.figures)
+                and keyed_payloads(persisted_snapshot.references) == keyed_payloads(snapshot.references)
+                and keyed_payloads(persisted_snapshot.glossary_terms) == keyed_payloads(snapshot.glossary_terms)
+            )
+
+            if structure_unchanged:
+                return
 
         self._delete_version_scope(connection, document_id=document_id, version_id=version_id)
 
