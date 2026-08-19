@@ -1,0 +1,1 @@
+"""Extraction contract tests."""

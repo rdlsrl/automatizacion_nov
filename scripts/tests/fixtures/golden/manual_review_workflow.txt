@@ -1,0 +1,7 @@
+Pump Manual
+
+Standpipe Pressure Calibration
+
+The transmitter was calibrated as follows.
+
+formula: 4 mA = 0 psi

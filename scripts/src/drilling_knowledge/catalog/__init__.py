@@ -1,0 +1,51 @@
+"""Catalog core domain package."""
+
+from drilling_knowledge.catalog.domain import (
+    CanonicalIdentity,
+    CatalogScope,
+    EquipmentClass,
+    EngineeringUnit,
+    InstrumentClass,
+    KnowledgeEntity,
+    LocationClass,
+    MeasurementPrinciple,
+    OperationalContextClass,
+    OriginClass,
+    PhysicalQuantity,
+    ProcessClass,
+    PublisherClass,
+    QuantityUnitCompatibility,
+    SensorClass,
+    SubsystemClass,
+    SystemClass,
+    Variable,
+    VariableAlias,
+    VariableClassification,
+)
+from drilling_knowledge.catalog.services.reader import CatalogReader
+from drilling_knowledge.catalog.validators.invariants import CatalogInvariantValidator
+
+__all__ = [
+    "CatalogInvariantValidator",
+    "CatalogReader",
+    "CanonicalIdentity",
+    "CatalogScope",
+    "EquipmentClass",
+    "EngineeringUnit",
+    "InstrumentClass",
+    "KnowledgeEntity",
+    "LocationClass",
+    "MeasurementPrinciple",
+    "OperationalContextClass",
+    "OriginClass",
+    "PhysicalQuantity",
+    "ProcessClass",
+    "PublisherClass",
+    "QuantityUnitCompatibility",
+    "SensorClass",
+    "SubsystemClass",
+    "SystemClass",
+    "Variable",
+    "VariableAlias",
+    "VariableClassification",
+]

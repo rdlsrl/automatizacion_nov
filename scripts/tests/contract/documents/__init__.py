@@ -1,0 +1,1 @@
+"""Document acquisition contract tests."""

@@ -1,0 +1,1 @@
+"""Resolution contract tests."""

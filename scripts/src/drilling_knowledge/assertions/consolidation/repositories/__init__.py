@@ -1,0 +1,5 @@
+from drilling_knowledge.assertions.consolidation.repositories.contracts import FactConsolidationRunRepository
+from drilling_knowledge.assertions.consolidation.repositories.memory import InMemoryFactConsolidationRunRepository
+from drilling_knowledge.assertions.consolidation.repositories.sqlite import SQLiteFactConsolidationRunRepository
+
+__all__ = ["FactConsolidationRunRepository", "InMemoryFactConsolidationRunRepository", "SQLiteFactConsolidationRunRepository"]
